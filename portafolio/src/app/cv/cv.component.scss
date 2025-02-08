@@ -1,0 +1,52 @@
+:root {
+  --paper-bg: #f5f3e7;
+  --ink-color: #2d2d2d;
+  --line-color: #b0c4de;
+  --margin-color: #d9534f;
+  --highlight-color: #0066cc;
+}
+
+.back-primary {
+    background-color: #fff;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), 
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px; /* Tamaño de cada cuadrícula */
+  }
+
+.profile-img {
+  background: url("/profile.jpg")
+    center top;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  border: 1px solid var(--line-color);
+}
+
+.btn-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--highlight-color);
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.3s;
+
+}
+
+.experience{
+    color:#d9534f;
+  }
+.btn-card mat-icon {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+
+.btn-card:hover {
+  background-color: var(--margin-color);
+  transform: scale(1.05);
+}
