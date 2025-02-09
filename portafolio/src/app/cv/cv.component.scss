@@ -1,52 +1,123 @@
-:root {
-  --paper-bg: #f5f3e7;
-  --ink-color: #2d2d2d;
-  --line-color: #b0c4de;
-  --margin-color: #d9534f;
-  --highlight-color: #0066cc;
+body {
+  font-family: "Arial", sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  /* Color de fondo principal */
+  background-color: #4c566a;
+  color: #eceff4;
+}
+.container-fluid {
+  background-color: #4c566a;
 }
 
-.back-primary {
-    background-color: #fff;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), 
-                      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px; /* Tamaño de cada cuadrícula */
-  }
-
-.profile-img {
-  background: url("/profile.jpg")
-    center top;
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  border: 1px solid var(--line-color);
-}
-
-.btn-card {
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: var(--highlight-color);
-  font-weight: bold;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, background 0.3s;
-
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #4c566a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
 }
 
-.experience{
-    color:#d9534f;
-  }
-.btn-card mat-icon {
-  font-size: 28px;
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background: url("/profile.jpg");
+  background-size: 100%;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 5px;
+  color: #a3be8c; /* Color verde claro para el nombre */
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #88c0d0; /* Color azul claro para el título */
+}
+
+h3 {
+  font-size: 1.2em;
   margin-bottom: 5px;
 }
 
+.section {
+  margin-bottom: 20px;
+}
 
-.btn-card:hover {
-  background-color: var(--margin-color);
-  transform: scale(1.05);
+.section-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #616e88; /* Línea separadora más oscura */
+  padding-bottom: 5px;
+  color: #eceff4; /* Color de título más claro */
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #616e88;
+  border-radius: 5px;
+  background-color: #434a59; /* Fondo más oscuro para habilidades */
+  color: #eceff4;
+  margin-bottom: 10px;
+  > .mat-badge {
+    border: none !important;
+    background-color: #7886a3;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    top: -18px;
+    color: WHITE;
+    right: -18px;
+  }
+}
+
+.experience-item,
+.project-item {
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #616e88;
+  border-radius: 5px;
+  background-color: #494f5c; /* Fondo un poco más claro para los items */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .avatar {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }

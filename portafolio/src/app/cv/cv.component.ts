@@ -1,76 +1,32 @@
-import { Component,inject } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import {
-  MAT_DIALOG_DATA,
-  MatDialog,
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogContent,
-  MatDialogRef,
-  MatDialogTitle,
-} from '@angular/material/dialog';
-import { ExperienceDialogComponent } from './experience-dialog/experience-dialog.component';
-import { PortfolioDialogComponent } from './portfolio-dialog/portfolio-dialog.component';
-import { SkillsDialogComponent } from './skills-dialog/skills-dialog.component';
-import { EducationDialogComponent } from './education-dialog/education-dialog.component';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http'; // Import BOTH HttpClient and HttpClientModule
+import { CvServiceService } from './service/cv-service.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cv',
-  imports: [MatIconModule],
+  standalone: true,
+  imports: [CommonModule,HttpClientModule],
   templateUrl: './cv.component.html',
-  styleUrl: './cv.component.scss'
+  styleUrl: './cv.component.scss',
+  providers: [CvServiceService]
 })
-export class CvComponent {
+export class CvComponent implements OnInit {
+  
+  profileData: any = [];
+  constructor(private profileService: CvServiceService) {}
 
-  readonly dialog = inject(MatDialog);
-
-  openExperienceDialog(): void {
-    const dialogRef = this.dialog.open(ExperienceDialogComponent, {
-      data: {},
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if (result !== undefined) {
-      }
+  ngOnInit(): void {
+    this.profileService.getProfileData().subscribe(data => {
+      this.profileData = data;
+      console.info(data)
     });
   }
 
-  openPortfolioDialog(): void {
-    const dialogRef = this.dialog.open(PortfolioDialogComponent, {
-      data: {},
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if (result !== undefined) {
-      }
-    });
+  deletedElement(id:number){
+    console.info(this.profileData.technologies)
+    this.profileData.technologies.splice(id,1)
   }
-
-  openSkillsDialog(): void {
-    const dialogRef = this.dialog.open(SkillsDialogComponent, {
-      data: {},
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if (result !== undefined) {
-      }
-    });
-  }
-
-  openEducationDialog(): void {
-    const dialogRef = this.dialog.open(EducationDialogComponent, {
-      data: {},
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      if (result !== undefined) {
-      }
-    });
-  }
-
-
 }
