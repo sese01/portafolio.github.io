@@ -1,0 +1,72 @@
+{
+  "profile": {
+    "name": "Sebastián Gómez",
+    "mainSkill": "Desarrollador de Software & Diseñador Gráfico",
+    "location": "Bogotá, Colombia",
+    "email": "sese4538@gmail.com",
+    "linkedin": "linkedin.com/in/sese-gomez",
+    "about": "Con más de 7 años de experiencia en desarrollo web y diseño gráfico, especializado en la creación de soluciones innovadoras para aplicaciones internas y externas. Actualmente transformo datos demográficos en información útil mediante el desarrollo de aplicaciones web en Angular y C#."
+  },
+  "technologies": [
+    "C#", "JavaScript", "TypeScript", "Angular 8+", "HTML", "CSS", "SCSS", "Node.js", "SQL", "Git", "REST API", "Figma", "Adobe XD"
+  ],
+  "experience": [
+    {
+      "title": "Full Stack Developer",
+      "years": "2019 - Actualidad",
+      "company": "Great Place to Work Colombia",
+      "description": "Desarrollo de aplicaciones web utilizando Angular y C#, enfocándome en la transformación de datos demográficos en información visualmente accesible. Aplicación de metodologías ágiles como Scrum y gestión de versiones con Git."
+    },
+    {
+      "title": "Asistente de Capacitaciones",
+      "years": "2017 - 2019",
+      "company": "Fuller Pinto S.A",
+      "description": "Desarrollo de vídeos corporativos, manejo de plataformas virtuales de capacitación y soporte web de la compañía."
+    },
+    {
+      "title": "Auxiliar de Comunicación, Redes y Diseño",
+      "years": "2016 - 2017",
+      "company": "Fuller Pinto S.A",
+      "description": "Creación y gestión de contenido para redes sociales, diseño gráfico y desarrollo de material publicitario."
+    },
+    {
+      "title": "Practicante de Redes Sociales",
+      "years": "2015 - 2016",
+      "company": "Fuller Pinto S.A",
+      "description": "Manejo de redes sociales y desarrollo de material gráfico para campañas internas y externas."
+    }
+  ],
+  "projects": [
+    {
+      "title": "GCTI Team Assessment",
+      "subtitle": "Plataforma de Evaluación de Equipos",
+      "description": "Aplicación web que permite evaluar equipos de trabajo mediante métricas de desempeño y generación de reportes dinámicos.",
+      "technologies": ["Angular", "C#", "SQL", "REST API"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Jala University",
+      "degree": "Ingeniería de Software Comercial con concentración en Diseño y Arquitectura",
+      "years": "2025 - 2026"
+    },
+    {
+      "institution": "Politécnico Internacional",
+      "degree": "Software and Mobile Applications Developer",
+      "years": "2020 - 2023"
+    },
+    {
+      "institution": "Escuela de Artes y Letras",
+      "degree": "Diplomado en Marketing y Comunicación Social",
+      "years": "2015 - 2016"
+    },
+    {
+      "institution": "Corporación Universitaria Escuela de Artes y Letras",
+      "degree": "Diseño Gráfico",
+      "years": "2014 - 2016"
+    }
+  ],
+  "certifications": [
+    "SCRUM FOUNDATION PROFESSIONAL CERTIFICATE"
+  ]
+}
